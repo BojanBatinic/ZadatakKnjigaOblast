@@ -13,6 +13,7 @@ public class Zadatak1KreiranjeTabela {
     public static void main(String[] args) {
         ConnectionSource connectionSource = null;
         try {
+
             connectionSource = new JdbcConnectionSource("jdbc:sqlite:knjigaOblast.db");
 
             TableUtils.dropTable(connectionSource, Oblast.class,true);
