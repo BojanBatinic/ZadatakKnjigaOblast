@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Zadatak KnjigaOblast.iml" filepath="$PROJECT_DIR$/.idea/modules/Zadatak KnjigaOblast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Zadatak_KnjigaOblast.iml" filepath="$PROJECT_DIR$/.idea/modules/Zadatak_KnjigaOblast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Zadatak_KnjigaOblast_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Zadatak_KnjigaOblast_main.iml" group="Zadatak_KnjigaOblast" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Zadatak_KnjigaOblast_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Zadatak_KnjigaOblast_test.iml" group="Zadatak_KnjigaOblast" />
+    </modules>
+  </component>
+</project>
