@@ -5,7 +5,9 @@ import model.Knjiga;
 
 import java.util.Random;
 
-import static zadaci.Biblioteka.prisutna;
+import static model.Knjiga.prisutna;
+
+//import static zadaci.Biblioteka.prisutna;
 
 public class KnjigaNit extends Thread{
 
@@ -13,7 +15,11 @@ public class KnjigaNit extends Thread{
 
     private String imeClana;
     public Knjiga knjiga;
+    //public static Boolean prisutna = true;
 
+
+    public KnjigaNit() {
+    }
 
     public KnjigaNit(String imeClana, Knjiga knjiga) {
         this.imeClana = imeClana;
@@ -32,36 +38,23 @@ public class KnjigaNit extends Thread{
         Random random = new Random();
 
         System.out.println(" Clan " + imeClana + " trazi knjigu " + knjiga.getNaslov() + ".");
-        try {
-            this.sleep(2000);
-            } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         do {
             synchronized (prisutna) {
                 if (prisutna) {
-                    try {
-
-                        sleep(random.nextInt(5000));
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println(" Clan " + imeClana + " je iznajmio knjigu " + knjiga.getNaslov() + ".");
                     prisutna = false;
-
-                }
+                System.out.println(" Clan " + imeClana + " ceka da knjiga " + knjiga.getNaslov() + " bude vraćena.");
+                 }
+                System.out.println(" Clan " + imeClana + " je iznajmio knjigu " + knjiga.getNaslov() + ".");
 
                 try {
-                    sleep(random.nextInt(2000));
+                    sleep(random.nextInt(5000));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(" Clan " + imeClana + " ceka da knjiga " + knjiga.getNaslov() + " bude vraćena.");
-
-
                 synchronized (prisutna) {
                     prisutna = true;
+
                     System.out.println(" Clan " + imeClana + " je vratio knjigu " + knjiga.getNaslov() + ".");
                 }
             }

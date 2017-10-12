@@ -14,7 +14,7 @@ public class Biblioteka {
 
     static Dao<Knjiga,Integer> knjigaDao;
 
-    public static Boolean prisutna = true;
+    //public static Boolean prisutna = true;
 
     public static void main(String[] args) {
 
@@ -28,10 +28,10 @@ public class Biblioteka {
         List<Knjiga> knjige = knjigaDao.queryForAll();
 
         KnjigaNit kn1 = new KnjigaNit("Milica", knjige.get(0));
-        KnjigaNit kn2 = new KnjigaNit("Dragana", knjige.get(0));
-        KnjigaNit kn3 = new KnjigaNit("Ljubica", knjige.get(0));
-        KnjigaNit kn4 = new KnjigaNit("Milica", knjige.get(1));
-        KnjigaNit kn5 = new KnjigaNit("Dragana", knjige.get(1));
+        KnjigaNit kn3 = new KnjigaNit("Dragana", knjige.get(0));
+        KnjigaNit kn5 = new KnjigaNit("Ljubica", knjige.get(0));
+        KnjigaNit kn2 = new KnjigaNit("Milica", knjige.get(1));
+        KnjigaNit kn4 = new KnjigaNit("Dragana", knjige.get(1));
         KnjigaNit kn6 = new KnjigaNit("Ljubica", knjige.get(1));
 
             kn1.start();
@@ -57,6 +57,13 @@ public class Biblioteka {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+        /* public synchronized boolean isPrisutna() {
+        return prisutna;
+    }
+
+    public synchronized void setPrisutna(boolean prisutna) {
+        this.prisutna = prisutna;
+    }*/
             }System.out.println("\nBiblioteka se zatvara.");
         }
 

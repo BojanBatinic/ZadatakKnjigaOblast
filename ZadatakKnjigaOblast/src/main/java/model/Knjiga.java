@@ -14,8 +14,9 @@ public class Knjiga {
     public static final String POLJE_BROJ_STRANA = "broj_strana";
     public static final String POLJE_DATUM_IZDAVANJA = "datum_izdavanja";
 
+    public static Boolean prisutna = true;
 
-    private boolean prisutna;
+
     @DatabaseField(generatedId = true)
     private int id;
     @DatabaseField(columnName = POLJE_NASLOV, canBeNull = false)
@@ -34,6 +35,14 @@ public class Knjiga {
         this.naslov = naslov;
         this.brojStrana = brojStrana;
         this.datumIzdanja = datumIzdanja;
+    }
+
+    public boolean isPrisutna() {
+        return prisutna;
+    }
+
+    public void setPrisutna(boolean prisutna) {
+        this.prisutna = prisutna;
     }
 
     public int getId() {
